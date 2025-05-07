@@ -1,0 +1,32 @@
+Setup in Task Scheduler
+
+1. Open Task Scheduler
+
+2. Create a New Task
+click Create Task.
+
+3. General Tab
+Name: Run Ingest Weather ETL
+Runs the ingest_weather.py script daily.
+Check: “Run with highest privileges”
+
+4. Triggers Tab
+Click New…
+Set: Begin the task: On a schedule
+Choose Daily, Weekly, or At log on
+Set the start time
+Click OK
+
+5. Actions Tab
+Click New…
+Action: Start a program
+Replace C:\Path\To\The\Script\ with the full path to the etl_runner.py script
+
+6. Settings Tab
+Check “Allow task to be run on demand”
+Check “Run task as soon as possible after a scheduled start is missed”
+Check “Stop the task if it runs longer than 1 hour”
+
+8. Save
+
+
